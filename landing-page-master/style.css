@@ -1,0 +1,382 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+    list-style: none;
+    /*quita lso puntos en lista*/
+    text-decoration: none;
+    /*quita subrayado de links*/
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    position: fixed;
+    /*header fijo por encima*/
+    right: 0;
+    top: 0;
+    z-index: 100;
+    /*header se muestra por encima*/
+    width: 100%;
+    display: flex;
+    /*elementos en linea*/
+    align-items: center;
+    /*centra verticalmente*/
+    justify-content: space-between;
+    /*se separan elementos*/
+    padding: 15px 3%;
+    background-color: black;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.navlist {
+    display: flex;
+    /*elementos de la lsta en una linea*/
+}
+
+.navlist a {
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2 px solid transparent;
+    /*subrayado transparente*/
+    transition: all .5s ease;
+    /*animar todas las caracteristicas del navlist a*/
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid white;
+    /*subrayado blanco aparece cuando pasamos el mouse*/
+}
+
+#menu-icon {
+    display: none;
+    /*lo se ve cuando la pagina colapsa*/
+}
+
+#menu-icon {
+    color: white;
+    font-size: 35px;
+    z-index: 101;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+    /*no se ve el checkbox*/
+}
+
+.menu-icon-action {
+    display: none;
+    /*no sepuede hacer click*/
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
+    position: relative;
+    /*paa que sea relativo al contenedor*/
+    display: grid;
+    /*para poder dividir en 2 columnas*/
+    grid-template-columns: 1fr 1fr;
+    /*las 2 columnas*/
+    align-items: center;
+    /*alinea verticalmente el hero*/
+    gap: 2rem;
+    /* espacio de 2 rem entre las 2 columnas*/
+}
+
+section {
+    padding: 0 8%;
+}
+
+.hero-text h5 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.hero-text h1 {
+    font-family: 'Inconsolata', monospace;
+    font-size: 50px;
+    line-height: 1;
+    margin: 0 0 30px;
+}
+
+.hero-text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.hero-text p {
+    font-size: 80%;
+    margin-bottom: 40px;
+    line-height: 1.9;
+}
+
+.hero-img img {
+    width: 400px;
+    margin: 10% 0 0 10%;
+    height: auto;
+    transition: all 5s linear;
+}
+
+.hero-img img:hover {
+    width: 450px;
+    opacity: 0.6;
+}
+
+.hero-text a {
+    display: inline-block;
+    background-color: #4d4d4d;
+    border: 1px solid transparent;
+    padding: 15px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+    margin: 5px;
+}
+
+.hero-text a:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    transform: translateX(8px)
+}
+
+.icons {
+    position: absolute;
+    top: 50vh;
+    padding: 0 3%;
+    transform: translateY(-50%);
+}
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    transition: all .5s ease;
+}
+
+.icons i:hover {
+    color: #4d4d4d;
+    transform: translateY(-5px);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 6%;
+    right: 3%;
+}
+
+.scroll-down i {
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    background-color: #21383d;
+    border-radius: 30px;
+    transition: all .5s ease;
+}
+
+.scroll-down i:hover {
+    transform: translateY(-5px);
+}
+
+main {
+    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
+
+}
+
+/*CONTACTO*/
+
+form.formulario {
+    width: 600px;
+    height: 500px;
+    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
+    padding: 30px;
+    margin: auto;
+    margin-top: 60px;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    display: flex;
+    flex-direction: column;
+
+}
+
+form.formulario h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    width: 100%;
+    background: rgb(216, 218, 219);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid rgb(90, 127, 163);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+form.formulario p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+input {
+    width: 100%;
+    background: rgb(216, 218, 219);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid rgb(90, 127, 163);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: rgb(82, 82, 82);
+}
+
+form.formulario a {
+    color: white;
+    text-decoration: none;
+}
+
+form.formulario textarea {
+    width: 100%;
+    height: 150px;
+    color: black;
+}
+
+#text {
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+
+/*RESPONSIVE*/
+
+@media (max-width:992px) {
+    section {
+        padding: 0 3%;
+        transition: .2s;
+    }
+
+    .hero-text {
+        padding-top: 0;
+    }
+
+    .hero-img {
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 80%;
+        margin: 10% 0 0 10%
+    }
+
+    .hero-text p {
+        font-size: 70%;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .scroll-down {
+        display: none;
+    }
+
+    form.formulario {
+        width: 90%;
+        height: 50%;
+    }
+
+    form.formulario h4 {
+        font-size: 15px;
+    }
+
+    .controls {
+        font-size: 13px;
+
+    }
+
+    input {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .menu-icon-action {
+        display: block;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .hero-text {
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-img img {
+        margin: 0;
+    }
+
+    .hero {
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 200px;
+        height: 180px;
+        background-color: #03272aef;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        transition: all .5s ease-out;
+    }
+
+    .navlist a {
+        display: block;
+        margin: 7px 0;
+    }
+
+    #menu-toggle:checked+label.menu-icon-action+ul {
+        right: 0;
+    }
+
+
+}
